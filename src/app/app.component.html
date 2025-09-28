@@ -1,1 +1,6 @@
-<app-http-client></app-http-client>
+<nav>
+    <a [routerLink]="['/']" routerLinkActive="active">Home</a>&nbsp;|&nbsp;
+    <a [routerLink]="['/products/1']" routerLinkActive="active">Product #1</a>&nbsp;|&nbsp;
+    <a [routerLink]="['/products/2']" routerLinkActive="active">Product #2</a>
+</nav>
+<router-outlet/>
