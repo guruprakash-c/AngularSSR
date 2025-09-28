@@ -1,0 +1,16 @@
+<div>
+    <a href="#" role="button" (click)="getPosts()">Get Posts</a>&nbsp;|&nbsp;<a href="#" role="button" (click)="addPost()">Add Post</a>
+    <hr/>
+    @if(newPost$ | async; as post){
+        <div>Added post: {{post.title}}</div>
+    }
+    <dl>
+        @for(post of posts$ | async; track post.id){
+            <dt>{{post.id}}</dt>
+            <dd>
+                <p><strong>{{post.title}}</strong></p>
+                <p>{{post.body}}</p>
+            </dd>
+        }
+    </dl>
+</div>
